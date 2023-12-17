@@ -1,0 +1,211 @@
+
+div{
+    border: 1px solid;
+    border-color: white;
+    
+}
+
+#principal{
+  
+   width: 700px;
+   height: 850px;
+   display: grid;
+   grid-template-columns: 200px 500px;
+   border: 1px dashed;
+   border-color: cadetblue;
+  
+  margin: 50px;
+  margin-left: 500px;
+ 
+}
+
+#izquierdo, #derecho{
+    /*  background-color: rgb(235, 127, 26);*/
+      display: flex;
+      flex-direction: column;
+      /*justify-content: center;*/
+      
+  }
+
+  .parrafoDatos{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 12px;
+    margin: 5px;
+    list-style-image: url('https://i.postimg.cc/GmH0B4p7/punto2.png');
+  }
+
+
+
+
+
+/*PanelIzquierdo contiene todos los paneles de la izquierda...............................................*/
+
+#izquierdo{
+    background-image: url(https://i.postimg.cc/4xc0hdqs/lateral2aio.png);
+    flex-grow: 1;
+    min-height: 200px;
+    color:white;
+}
+
+#derecho{
+    
+    flex-grow: 1;
+    max-height: 800px;
+    max-width: 99%;
+    
+   
+}
+
+#skills, #cursos, #educacion, #informacion{
+  
+    display:inline-block;
+    height: 40%;
+}
+
+
+
+
+#central{
+    background-color: white;
+
+   border:none;
+   margin-top: 20px;
+    
+}
+
+li {
+    padding-bottom: 25px;
+}
+
+
+.li2 {
+    padding-bottom: 10px;
+}
+
+
+/*Scroll personalizado..................................................................................*/
+.miScroll {
+    /*height: 20em;*/
+    line-height: 1em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(60, 208, 182);
+    border-radius: 10px;
+  }
+
+  /* nuevo formato para mostrar la formacion.................................................................*/
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0;
+}
+
+article {
+  max-width: 573px;
+  
+  font-family: system-ui;
+  border: 1px solid rgb(60, 208, 182);
+  color: black;
+  border-radius: 4px;
+
+  
+ 
+}
+
+.title {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px;
+
+}
+
+.title2 {
+  /*font-weight: 500;*/
+  font-size: 25px;
+  padding: 5px;
+  color: rgb(28, 138, 118);
+  font-style:italic;
+  text-align: center;
+
+  
+}
+
+.content {
+  padding-inline: 1rem;
+}
+
+.content {
+  display: grid; 
+  grid-template-rows: 0fr;
+  transition: .3s grid-template-rows ease-in-out;
+}
+
+article:hover .content{
+  grid-template-rows: 1fr;
+}
+
+
+/* efecto sobre titulo y subtitulo al poner el raton encima........................................................... */ 
+.title:hover .subtitulo{
+  color:white;
+}
+
+.title:out .subtitulo{
+  color:dimgray;
+}
+
+.title:hover{
+
+animation:miColor 1.5s;
+background-color:rgb(60, 208, 182);
+color:white;
+}
+
+
+@keyframes miColor {
+  0% {
+    background-color:rgb(12,106,129);
+    
+  }
+  
+  100% {
+    background-color:rgb(60, 208, 182);
+  }
+}
+
+
+
+
+/*************----------------------------------------------------------**********/
+
+.content > div {
+  overflow: hidden;
+}
+
+.subtitulo{
+  color: dimgray;
+  font-family: system-ui;
+  font-size: 14px;
+}
